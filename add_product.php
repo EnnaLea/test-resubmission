@@ -44,37 +44,12 @@ include_once("./includes/head.php");
     <div class="album py-5 bg-light">
 
 
-
-
-
-      <!-- <div class="container">
-        <h2>Add some cards..</h2>
-        <form class="form-inline">
-          <button type="button" class="btn btn-info" id="btnGen">Generate</button>
-        </form>
-        <br>
-        <div class="row" id="contentPanel">
-        </div>
-      </div> -->
-
       <?php
 
-      // $data = new Database();
-      // $class_call = new CallType();
-      // $class_call->calling();
-      // $class_call->delete();
-
-
-      $data = new Database;
-      $products = new CallType;
-      $products->calling();
-
-
-
-      // $furniture->setValue();
-      // $furniture->getValue();
-      // print_r($furniture->getValue());
-
+      $data = new Database();
+      $class_call = new CallType();
+      $class_call->call();
+      $class_call->delete();
 
       ?>
 
@@ -159,12 +134,7 @@ include_once("./includes/head.php");
 
     </div>
 
-
-
-
     </div>
-
-
 
   </form>
 

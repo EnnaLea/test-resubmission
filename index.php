@@ -2,7 +2,7 @@
 
 // da togliere una volta finito il progetto
 include_once("./includes/head.php");
-// include_once("./classes/dvd.class.php");
+
 
 ?>
 
@@ -21,7 +21,7 @@ include_once("./includes/head.php");
 
 <main>
 
-  <form action="get">
+  <form method="post">
 
 
     <section class="py-5 text-center container ">
@@ -32,7 +32,8 @@ include_once("./includes/head.php");
               <h1 class=" fw-light">Product List</h1>
             </span>
             <span class="product-buttons col"><a href="add_product.php" class=" btn btn-primary my-2">ADD</a>
-              <a href="#" id="delete-product-btn" class="btn btn-secondary my-2">MASS DELETE</a></span>
+              <button id="delete-product-btn" type="submit" name="mass_delete" class="btn btn-secondary my-2" value="mass_delete">MASS DELETE</button>
+            </span>
           </div>
 
         </div>
@@ -42,50 +43,24 @@ include_once("./includes/head.php");
     <div class="main album py-5 bg-light">
       <div class="container-fluid">
 
-
-
-
-
-
-
-
-
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 d-flex">
 
           <?php
+
           $data = new Database;
           $product = new Display();
-          // $dvd->getValue();
-          // $dvd->setValue();
-          $product->display();
-          // print_r($dvd->getValue());
-
-          // $data = new Database;
-          // $furniture = new Furniture();
-          // $furniture->setValue();
-          // $furniture->getValue();
-
-          // include_once("./display_products.php");
+          $product->getDisplay();
+          $product->massDelete();
 
           ?>
 
         </div>
 
-
-
-
-
       </div>
 
-
     </div>
 
-
     </div>
-
-
-
-
 
   </form>
 

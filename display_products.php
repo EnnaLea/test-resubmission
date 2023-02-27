@@ -20,15 +20,15 @@ include_once("init.php");
             </div> -->
         <?php
 
-        // $data = new Database();
-        // $class_call = new CallType();
-        // $class_call->calling();
+        $data = new Database();
+        $class_call = new CallType();
+        $class_call->call();
         // $class_call->delete();
 
 
-        $data = new Database;
-        $dvd = new Dvd();
-        $dvd->getValue();
+        // $data = new Database;
+        // $dvd = new Dvd();
+        // $dvd->getValue();
         // $furniture = new Furniture();
         // $furniture->setValue();
         // print_r($furniture->getValue());

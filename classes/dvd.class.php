@@ -25,6 +25,7 @@ class Dvd extends Products
             $data->query($sql);
 
             header("Location: index.php");
+            exit();
         }
     }
 
@@ -134,13 +135,14 @@ class Dvd extends Products
     // }
 
 
-    public function delete()
-    {
-        global $data;
+    // public function delete()
+    // {
+    //     global $data;
 
-        if (isset($_POST['delete_product'])) {
+    //     if (isset($_POST['delete_product'])) {
 
-            header("Location: index.php");
-        }
-    }
+    //         header("Location: index.php");
+    //         exit();
+    //     }
+    // }
 }

@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+ob_start();
+
 include_once("init.php");
 
 ?>

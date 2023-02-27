@@ -15,19 +15,19 @@ abstract class Products extends Database
 
 
     //delete product one at time
-    protected function delete()
-    {
-        global $data;
-        if (isset($_POST['delete_product'])) {
+    // protected function delete()
+    // {
+    //     global $data;
+    //     if (isset($_POST['delete_product'])) {
 
-            $id = $_POST['sku'];
+    //         $id = $_POST['sku'];
 
-            $sql = "DELETE FROM product WHERE sku = $id ";
+    //         $sql = "DELETE FROM product WHERE sku = $id ";
 
-            $data->__construct();
-            $data->query($sql);
-        }
-    }
+    //         $data->__construct();
+    //         $data->query($sql);
+    //     }
+    // }
 
 
     // auto instatiantion

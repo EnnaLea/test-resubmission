@@ -23,6 +23,7 @@ general condition:
 
 - Avoid using conditional statements for handling differences in product types
     - This means you should avoid any if-else and switch-case statements which are used to handle any difference between products.
+    <!-- da verificare se fatto correttamente -->
 
 
 - Do not use different endpoints for different products types. There should be 1 general endpoint for product saving
@@ -30,6 +31,7 @@ general condition:
 matbe just one table?
 credo che si riferisce al sallvataggio dei diversi prodotti nella pagina product list?
 
+ho creato una sola tabella
  -->
 
 - PHP: ^7.0, plain classes, no frameworks, OOP approach
@@ -70,6 +72,7 @@ Please note, that on product list page product should not be split by product ty
 
 - “MASS DELETE” action, implemented as checkboxes next to each product (should have a class: .delete-checkbox) and a button “MASS DELETE” triggering delete action for the selected products.
 <!--  see project oop csm to implemet -->
+<!-- fatto! -->
 
 - There should be no pagination for the listing, all items should be on the same page
 - Do not show any notification messages or alert windows loading the list or after submitting ADD new product dialogue
@@ -92,10 +95,12 @@ Requirement for ADD PRODUCT:
 
 - The page must have a “Save” button to save the product. Once saved, return to the “Product List” page with the new product added.
 <!-- save into the database then go on product list and show the addiction -->
+<!-- fatto! -->
 
 - The page must have a “Cancel” button to cancel adding the product action. Once canceled, returned to the “Product List” page with no new products added.
 <!-- delete query then go on product list and show the change -->
 <!-- no need of query just redirecting to product list -->
+<!-- fatto! -->
 
 - No additional dialogues like “Are you sure you want to Save / Cancel?”
 - SKU should be unique for each product and it shouldn’t be possible to save products if already any product with the same SKU exists.
@@ -105,8 +110,6 @@ Requirement for ADD PRODUCT:
 
 
  <!-- 
- PRODUCT LIST page display the product chosen. It is displayed the product added in carousel format :
- You need to create carousel slider, that switches between content, like this - https://kenwheeler.github.io/slick/
 
  ADD PRODUCT page give the option to add product to the database choose product, one at time.
   -->
@@ -135,45 +138,5 @@ INSERT QUERY!!!
 
 
 
-######### OOP CONCEPTS IMPLEMENTED:
 
-CLASS DATABASE:
-METHODS = PROTECTED CONNECTION
-          PROTECTED QUERY
-          PROTECTED CONFIRM QUERY
-          PROTECTED CLEAN QUERY
-
-MAIN CLASS PRODUCTS EXTENDS DATABSE:
-PROPERTIES = SKU, NAME, PRICE
-METHODS = PROTECTED SETVALUE(INSERT INTO QUERY)
-          PROTECTED GETVALUE(SELET * FROM QUERY)
-          PRIVATE DELETE(DELETE QUERY)
-          PROTECTED AUTOLODINGCLASS
-          PUBLIC AUTOINSTANTIATION
-
-DVD EXTENDS PRODUCTS:
-inherit properties and methods
-own properties:
-size
-own method:
-polimorphism -> PRIVATE SETVALUE(INSERT INTO QUERY)
-                PRIVATE GETVALUE(SELECT * FROM QUERY)
-
-BOOK EXTENDS PRODUCTS:
-inherit properties and methods
-own properties:
-weight
-own method:
-polimorphism -> PRIVATE SETVALUE(INSERT INTO QUERY)
-                PRIVATE GETVALUE(SELECT * FROM QUERY)               
-
- FURNITURE EXTENDS PRODUCTS:
-inherit properties and method
-own properties:
-width
-lenght
-height
-own method:
-polimorphism -> PRIVATE SETVALUE(INSERT INTO QUERY)
-                PRIVATE GETVALUE(SELECT * FROM QUERY)
 

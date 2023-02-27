@@ -5,7 +5,7 @@
 class CallType
 {
 
-    public function calling()
+    public function call()
     {
         global $data;
 
@@ -18,23 +18,14 @@ class CallType
                 case 'dvd':
                     $dvd = new Dvd();
                     $dvd->setValue();
-                    // print_r($dvd->getValue());
-                    // $dvd->getValue();
-                    $dvd->delete();
                     break;
                 case 'book':
                     $book = new Book();
                     $book->setValue();
-                    // print_r($book->getValue());
-                    // $book->getValue();
-                    $book->delete();
                     break;
                 case 'furniture':
                     $furniture = new Furniture();
                     $furniture->setValue();
-                    // print_r($furniture->getValue());
-                    // $furniture->getValue();
-                    $furniture->delete();
                     break;
 
                 default:
@@ -46,7 +37,11 @@ class CallType
 
     public function delete()
     {
-        // global $data;
-        // $this->delete();
+        global $data;
+        if (isset($_POST['delete_product'])) {
+
+            header("Location: index.php");
+            exit();
+        }
     }
 }
