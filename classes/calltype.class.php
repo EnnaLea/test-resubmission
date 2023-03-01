@@ -11,8 +11,10 @@ class CallType
 
         $data = new Database();
 
-        if (isset($_POST['save_product'])) {
+        if (isset($_POST['type-switcher'])) {
             $class = strtolower($_POST['type-switcher']);
+
+            // if (isset($_POST['type-switcher'])) {
 
             switch ($class) {
                 case 'dvd':
@@ -32,6 +34,7 @@ class CallType
 
                     break;
             }
+            // }
         }
     }
 

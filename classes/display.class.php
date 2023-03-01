@@ -3,6 +3,11 @@
 
 class Display
 {
+
+
+
+
+
     public function getDisplay()
     {
 
@@ -26,19 +31,19 @@ class Display
 
             echo "
 
-            <div class='row' id='display' >
+            <div class='row' id='display' > 
 
             <div class='col' id='info'> 
 
             <div class='card' style = 'margin: 0; padding-top: 0.5rem; padding-bottom:0.5rem; dispaly: flex; '>
                 <div class='card-body info' style= 'dispaly: flex; margin: 0; padding: 0;'>
-                <input type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$sku'>
+                <input id= 'chk_all' type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$sku'>
                 <div class='items text-center style='justify-content:center; align-items: center; margin: 0; padding: 0; ''>
                                 
                 <table style='justify-content:center; align-items: center; margin: 0; padding: 0; '>
             <tbody >
-                <tr class='row' style='font-weight: bold; font-size: 1.2rem;'> " .
-                " <td> " . $sku . "</td>
+                <tr class='row' style='font-weight: bold; font-size: 1.2rem;'> 
+                 <td> " . $sku . "</td>
                     <td> " . $name . "</td>
                     <td>" . $price . "</td>
                     <td>" . $type . "</td>
@@ -60,23 +65,53 @@ class Display
 
 
 
+
+
+    public function errors()
+    {
+        global $data;
+
+        $data = new Database;
+
+        $err = "Please, submit required data.     ";
+
+        if (isset($_POST['save_product'])) {
+
+            if (empty($_POST['sku'])) {
+            }
+
+            if (empty($_POST['name'])) {
+            }
+
+            if (empty($_POST['price'])) {
+            }
+
+            echo $err;
+        }
+    }
+
+
+
     public function massDelete()
     {
 
         global $data;
         if (isset($_POST['mass_delete'])) {
 
-            if (isset($_POST['delete-checkbox']))
+            if (isset($_POST['delete-checkbox'])) {
 
-                foreach ($_POST['delete-checkbox'] as $checkId) {
+                $checkbox = $_POST['delete-checkbox'];
 
-                    $sql = "DELETE FROM product WHERE sku = $checkId ";
+                foreach ($checkbox as $checkId) {
+
+                    $sql = "DELETE FROM product WHERE sku = $checkId  ";
 
                     $data->query($sql);
-
-                    header("Location: index.php");
-                    exit();
                 }
+
+                header("Location: index.php");
+                exit();
+            }
         }
     }
 }

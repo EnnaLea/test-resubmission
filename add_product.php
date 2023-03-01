@@ -2,6 +2,8 @@
 // da togliere una volta finito il progetto 
 include_once("./includes/head.php");
 
+session_start();
+
 ?>
 
 
@@ -21,7 +23,7 @@ include_once("./includes/head.php");
 
 <main>
 
-  <form action="" class="" method="post">
+  <form action="" class="" method="post" id="product_form">
 
     <section class="py-5 text-center container ">
       <div class="heading row py-lg-5 ">
@@ -50,22 +52,28 @@ include_once("./includes/head.php");
       $class_call = new CallType();
       $class_call->call();
       $class_call->delete();
+      $err = new Display();
+      $err->errors();
+
 
       ?>
 
       <div class="form-group mb-3" style="width: 30rem;">
         <label for="sku">SKU</label>
-        <input class="form-control" type="text" name="sku" id="#sku" placeholder="" required>
+        <input class="form-control" type="text" name="sku" id="sku" placeholder="">
+        <label id="sku-error" class="error" for="sku"></label>
       </div>
 
       <div class="form-group mb-3" style="width: 30rem;">
         <label for="name">Name</label>
-        <input class="form-control" type="text" name="name" id="#name" placeholder="">
+        <input class="form-control" type="text" name="name" id="name" placeholder="">
+        <label id="name-error" class="error" for="name"></label>
       </div>
 
       <div class="form-group mb-3" style="width: 30rem;">
         <label for="price">Price($)</label>
-        <input class="form-control" type="text" name="price" id="#price" placeholder="">
+        <input class="form-control" type="text" name="price" id="price" placeholder="">
+        <label id="price-error" class="error" for="price"></label>
       </div>
 
       <!-- SELECT OPTION  FORM-->
@@ -92,7 +100,7 @@ include_once("./includes/head.php");
         <div class=" container select-option-dvd" id="dvd-form ">
           <div class="form-group mb-3 DVD" style="width: 30rem;">
             <label for="size" class="control-label">Size MB</label>
-            <input id="#size" name="size" class="form-control" type="text" id="#size" placeholder="">
+            <input name="size" class="form-control" type="text" id="size" placeholder="">
             <div id="passwordHelpBlock" class="form-text">
               “Please, provide size in MB.”
             </div>
@@ -105,13 +113,16 @@ include_once("./includes/head.php");
         <div class=" container furniture-form select-option-furniture">
           <div class=" mb-3" style="width: 30rem;">
             <label for="height" class="control-label">Height (CM)</label>
-            <input class="form-control" name="height" type="text" id="#height" placeholder="">
+            <input class="form-control" name="height" type="text" id="height" placeholder="">
+
 
             <label for="width" class="control-label">Width (CM)</label>
-            <input class="form-control" name="width" type="text" id="#width" placeholder="">
+            <input class="form-control" name="width" type="text" id="width" placeholder="">
+
 
             <label for="length" class="control-label">Length (CM)</label>
-            <input class="form-control" name="lenght" type="text" id="#length" placeholder="">
+            <input class="form-control" name="lenght" type="text" id="length" placeholder="">
+
           </div>
 
           <div id="passwordHelpBlock" class="form-text form-group">
@@ -124,7 +135,7 @@ include_once("./includes/head.php");
         <div class="form-group container book-form select-option-book">
           <div class="form-group mb-3" style="width: 30rem;">
             <label for="weight" class="control-label">Weight (KG)</label>
-            <input class="form-control" name="weight" type="text" id="#weight" placeholder="">
+            <input class="form-control" name="weight" type="text" id="weight" placeholder="">
             <div id="passwordHelpBlock" class="form-text">
               “Please, provide weight in KG.”
             </div>

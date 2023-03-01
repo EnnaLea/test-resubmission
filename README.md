@@ -51,6 +51,7 @@ ho creato una sola tabella
 Requirement for PRODUCT LIST:
 This is the first page of the website, so should be accessible by <your_website>/
 Please note, that on product list page product should not be split by product types - they should be sorted by primary key in database.
+<!-- fatto -->
 
 ### MUST HAVE for the list items:
 
@@ -75,7 +76,9 @@ Please note, that on product list page product should not be split by product ty
 <!-- fatto! -->
 
 - There should be no pagination for the listing, all items should be on the same page
+<!-- ok -->
 - Do not show any notification messages or alert windows loading the list or after submitting ADD new product dialogue
+<!-- ok -->
 
 
 Requirement for ADD PRODUCT:
@@ -85,6 +88,7 @@ Requirement for ADD PRODUCT:
 
 - All fields are mandatory for submission, missing values should trigger notification “Please, submit required data”
 <!-- implement with js or html? -->
+<!-- fatto! -->
 
 - Implement input field value validation, invalid data must trigger notification “Please, provide the data of indicated type”
 <!-- data validation  see project php oop-->
@@ -92,6 +96,7 @@ Requirement for ADD PRODUCT:
 
 
 - Notification messages should appear on the same page without reloading
+<!-- fatto? -->
 
 - The page must have a “Save” button to save the product. Once saved, return to the “Product List” page with the new product added.
 <!-- save into the database then go on product list and show the addiction -->
@@ -103,7 +108,9 @@ Requirement for ADD PRODUCT:
 <!-- fatto! -->
 
 - No additional dialogues like “Are you sure you want to Save / Cancel?”
+<!-- ok -->
 - SKU should be unique for each product and it shouldn’t be possible to save products if already any product with the same SKU exists.
+<!-- fatto! -->
 
 
 #####################################################################################
