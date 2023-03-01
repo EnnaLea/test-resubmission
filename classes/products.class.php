@@ -11,7 +11,7 @@ abstract class Products extends Database
 
 
     //display data
-    // abstract function getValue();
+    abstract function getValue();
 
 
     //delete product one at time

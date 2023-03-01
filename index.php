@@ -3,7 +3,6 @@
 // da togliere una volta finito il progetto
 include_once("./includes/head.php");
 
-
 ?>
 
 
@@ -49,7 +48,7 @@ include_once("./includes/head.php");
 
           $data = new Database;
           $product = new Display();
-          $product->getDisplay();
+          $product->showProduct();
           $product->massDelete();
 
           ?>

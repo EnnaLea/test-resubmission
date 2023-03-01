@@ -2,13 +2,10 @@
 // da togliere una volta finito il progetto 
 include_once("./includes/head.php");
 
-session_start();
-
 ?>
 
 
 <header>
-
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
@@ -50,11 +47,8 @@ session_start();
 
       $data = new Database();
       $class_call = new CallType();
-      $class_call->call();
-      $class_call->delete();
       $err = new Display();
       $err->errors();
-
 
       ?>
 

@@ -68,14 +68,9 @@ $(document).ready(function () {
                 minlength: 3,
                 maxlenght: 20,
                 letters: true //why it doesn't work???
-
-
             },
             price: {
                 minlength: 3,
-
-
-
             },
             weight: {
 
