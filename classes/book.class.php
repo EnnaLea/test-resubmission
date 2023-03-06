@@ -18,11 +18,11 @@ class Book extends Products implements Calling
                 }
             }
 
-            $sku = ($_POST['sku']);
-            $name = ($_POST['name']);
-            $price = ($_POST['price']);
-            $type = ($_POST['type-switcher']);
-            $weight = ($_POST['weight']);
+            $sku = $this->clean($_POST['sku']);
+            $name = $this->clean($_POST['name']);
+            $price = $this->clean($_POST['price']);
+            $type = $this->clean($_POST['type-switcher']);
+            $weight = $this->clean($_POST['weight']);
 
             $sql = "INSERT INTO product (sku, name , price, type, weight) VALUES('$sku', '$name', '$price', '$type', '$weight') ";
 

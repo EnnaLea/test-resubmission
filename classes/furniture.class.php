@@ -28,13 +28,13 @@ class Furniture extends Products implements Calling
 
             if ($class == 'furniture') {
 
-                $sku = $_POST['sku'];
-                $name = $_POST['name'];
-                $price = $_POST['price'];
+                $sku = $this->clean($_POST['sku']);
+                $name = $this->clean($_POST['name']);
+                $price = $this->clean($_POST['price']);
                 $type = $_POST['type-switcher'];
-                $height = $_POST['height'];
-                $width = $_POST['width'];
-                $lenght = $_POST['lenght'];
+                $height = $this->clean($_POST['height']);
+                $width = $this->clean($_POST['width']);
+                $lenght = $this->clean($_POST['lenght']);
 
                 $sql = "INSERT INTO product(sku, name , price, type, height, width, lenght) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$lenght')  ";
 

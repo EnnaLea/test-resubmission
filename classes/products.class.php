@@ -28,6 +28,6 @@ abstract class Products extends Database
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
-        return $this;
+        return $data;
     }
 }

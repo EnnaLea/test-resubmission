@@ -17,11 +17,11 @@ class Dvd extends Products implements Calling
                 }
             }
 
-            $sku = $_POST['sku'];
-            $name = $_POST['name'];
-            $price = $_POST['price'];
+            $sku = $this->clean($_POST['sku']);
+            $name = $this->clean($_POST['name']);
+            $price = $this->clean($_POST['price']);
             $type = $_POST['type-switcher'];
-            $size = $_POST['size'];
+            $size = $this->clean($_POST['size']);
             $sql = "INSERT INTO product (sku, name , price, type, size) VALUES('$sku', '$name', '$price', '$type', '$size') ";
             $data->query($sql);
 

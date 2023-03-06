@@ -30,51 +30,52 @@ $(document).ready(function () {
     // alert('hello');
 
 
-    $(".product_form").validate({
+    $("#product_form").validate({
 
         rules: {
             sku: {
+                // required: true,
                 minlength: 3,
                 number: true,
 
             },
             name: {
-
+                // required: true,
                 minlength: 3,
                 maxlenght: 20,
             },
             price: {
+                // required: true,
                 minlength: 3,
             },
             weight: {
-
+                // required: true,
                 number: true,
                 min: 1,
 
             },
             size: {
-
+                // required: true,
                 number: true,
                 min: 100,
 
             },
             width: {
-
+                // required: true,
                 number: true,
                 min: 10,
 
             },
             lenght: {
-
+                // required: true,
                 number: true,
                 min: 30,
 
             },
             height: {
-
+                // required: true,S
                 number: true,
                 min: 40,
-
             },
 
         },

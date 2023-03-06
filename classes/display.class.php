@@ -58,9 +58,7 @@ class Display
                 echo $nameErr = "Price is required.  ";
             }
 
-
-
-            echo ($err);
+            return $err;
         }
     }
 
