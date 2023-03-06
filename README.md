@@ -7,15 +7,10 @@ general condition:
     - Procedural PHP code is allowed exclusively to initialize your PHP classes. Rest logic should be placed within class methods.
 
     - For OOP you would need to demonstrate code structuring in meaningful classes that extend each other, so we would like to see an abstract class for the main product logic. Please take a look at the polymorphism provision. 
-    <!-- fatto, credo -->
+    <!-- fatto! -->
 
     - Also, MySQL logic should be handled by objects with properties instead of direct column values. Please use setters and getters for achieving this and don't forget to use them for both save and display logic.
-    <!-- fatto, credo -->
-
-    <!-- use set to insert query
-    get to fetch table rows
-    
-     -->
+    <!-- fatto! -->
 
 
 - Meet PSR standards ([https://www.php-fig.org](https://www.php-fig.org/))
@@ -23,7 +18,7 @@ general condition:
 
 - Avoid using conditional statements for handling differences in product types
     - This means you should avoid any if-else and switch-case statements which are used to handle any difference between products.
-    <!-- da verificare se fatto correttamente -->
+    <!-- fatto! -->
 
 
 - Do not use different endpoints for different products types. There should be 1 general endpoint for product saving

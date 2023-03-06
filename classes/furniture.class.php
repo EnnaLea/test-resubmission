@@ -1,11 +1,7 @@
 <?php
 
-// include_once("init.php");
-
-class Furniture extends Products
+class Furniture extends Products implements Calling
 {
-
-
 
 
     public function setValue()
@@ -15,7 +11,7 @@ class Furniture extends Products
         if (isset($_POST['save_product'])) {
 
             if (isset($_POST['type-switcher'])) {
-                // $err = "Please, submit required data";
+
 
                 if (empty($_POST['width'])) {
                 }
@@ -28,21 +24,25 @@ class Furniture extends Products
                 echo "";
             }
 
-            $sku  = $_POST['sku'];
-            $name = $_POST['name'];
-            $price = $_POST['price'];
-            $type = $_POST['type-switcher'];
-            $height = $_POST['height'];
-            $width = $_POST['width'];
-            $lenght = $_POST['lenght'];
+            $class = strtolower($_POST['type-switcher']);
 
-            $sql = "INSERT INTO product(sku, name , price, type, height, width, lenght) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$lenght')  ";
+            if ($class == 'furniture') {
 
-            $data->__construct();
-            $data->query($sql);
+                $sku = $_POST['sku'];
+                $name = $_POST['name'];
+                $price = $_POST['price'];
+                $type = $_POST['type-switcher'];
+                $height = $_POST['height'];
+                $width = $_POST['width'];
+                $lenght = $_POST['lenght'];
 
-            header("Location: index.php");
-            exit();
+                $sql = "INSERT INTO product(sku, name , price, type, height, width, lenght) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$lenght')  ";
+
+                $data->query($sql);
+
+                header("Location: index.php");
+                exit();
+            }
         }
     }
 
@@ -51,11 +51,13 @@ class Furniture extends Products
     {
         global $data;
 
-        $query = "SELECT sku, name, price, height, width, lenght FROM product WHERE type = 'furniture' ";
+        $query = "SELECT id, sku, name, price, height, width, lenght FROM product WHERE type = 'furniture' ";
 
         $result = $data->query($query);
 
         while ($row = mysqli_fetch_array($result)) {
+
+            $id = $row['id'];
 
             $sku = $row['sku'];
             $name = $row['name'];
@@ -71,7 +73,7 @@ class Furniture extends Products
 
             <div class='card' style='margin: 0; padding-top: 0.5rem; padding-bottom:0.5rem; dispaly: flex; '>
                 <div class='card-body info' style='dispaly: flex; margin: 0; padding: 0;'>
-                    <input id='chk_all' type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$sku'>
+                    <input id='chk_all' type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$id'>
                     <div class='items text-center style=' justify-content:center; align-items: center; margin: 0; padding: 0; ''>
 
                         <table style='justify-content:center; align-items: center; margin: 0; padding: 0; '>
@@ -90,5 +92,10 @@ class Furniture extends Products
         </div>
     </div>";
         }
+    }
+
+    public function call()
+    {
+        return $this->getValue();
     }
 }

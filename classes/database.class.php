@@ -1,6 +1,5 @@
 <?php
 
-include_once("init.php");
 
 class Database
 {
@@ -16,7 +15,7 @@ class Database
     // connection to database method
     public function db_connection()
     {
-        $this->connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+        $this->connection = new mysqli('localhost', 'root', 'root', 'products', 8889);
 
         if ($this->connection->connect_errno) {
             die("Database connection failed!" . $this->connection->connect_error);
@@ -41,24 +40,6 @@ class Database
             die("Query failed!" . $this->connection->error);
         }
     }
-
-    // to clean string
-    public function escape_string($string)
-    {
-        $escapade_string = $this->connection->real_escape_string($string);
-
-        return $escapade_string;
-    }
-
-
-    // public function create()
-    // {
-    //     $sql = "INSERT INTO product(sku, p_name, p_price) ";
-    //     $sql .= "VALUES ('";
-    //     $sql .= $this->escape_string($this->sku) . "','";
-    //     $sql .= $this->escape_string($this->name) . "','";
-    //     $sql .= $this->escape_string($this->price) .  "')";
-    // }
 }
 
 $data = new Database;

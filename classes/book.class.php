@@ -1,10 +1,7 @@
 <?php
 
-// include_once("init.php");
 
-
-//specialization
-class Book extends Products
+class Book extends Products implements Calling
 {
 
 
@@ -15,20 +12,19 @@ class Book extends Products
         if (isset($_POST['save_product'])) {
 
             if (isset($_POST['type-switcher'])) {
-                // $err = "Please, submit required data";
 
                 if (empty($_POST['weight'])) {
                     echo "";
                 }
             }
 
-            $sku = $_POST['sku'];
-            $name = $_POST['name'];
-            $price = $_POST['price'];
-            $type = $_POST['type-switcher'];
-            $weight = $_POST['weight'];
+            $sku = ($_POST['sku']);
+            $name = ($_POST['name']);
+            $price = ($_POST['price']);
+            $type = ($_POST['type-switcher']);
+            $weight = ($_POST['weight']);
 
-            $sql = "INSERT INTO product(sku, name , price, type, weight) VALUES('$sku', '$name', '$price', '$type', '$weight') ";
+            $sql = "INSERT INTO product (sku, name , price, type, weight) VALUES('$sku', '$name', '$price', '$type', '$weight') ";
 
             $data->query($sql);
 
@@ -41,11 +37,13 @@ class Book extends Products
     {
         global $data;
 
-        $query = "SELECT sku, name, price, weight FROM product WHERE type = 'book' ";
+        $query = "SELECT id, sku, name, price, weight FROM product WHERE type = 'book' ";
 
         $result = $data->query($query);
 
         while ($row = mysqli_fetch_array($result)) {
+
+            $id = $row['id'];
 
             $sku = $row['sku'];
             $name = $row['name'];
@@ -59,7 +57,7 @@ class Book extends Products
 
             <div class='card' style = 'margin: 0; padding-top: 0.5rem; padding-bottom:0.5rem; dispaly: flex; '>
                 <div class='card-body info' style= 'dispaly: flex; margin: 0; padding: 0;'>
-                <input id= 'chk_all' type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$sku'>
+                <input id= 'chk_all' type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$id'>
                 <div class='items text-center style='justify-content:center; align-items: center; margin: 0; padding: 0; ''>
                                 
                 <table style='justify-content:center; align-items: center; margin: 0; padding: 0; '>
@@ -78,5 +76,11 @@ class Book extends Products
             </div>
         </div>";
         }
+    }
+
+
+    public function call()
+    {
+        return $this->setValue();
     }
 }

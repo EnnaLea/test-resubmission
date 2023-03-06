@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    $("#productType").change(function () {
+    $(".productType").change(function () {
         $(this).find("option:selected").each(function () {
             var optionValue = $(this).attr("value");
 
@@ -27,35 +27,10 @@ $(document).ready(function () {
         });
     }).change();
 
-
-    $('#chk_all').click(function () {
-        if (this.checked)
-            $(".delete-checkbox").prop("checked", true);
-        else
-            $(".delete-checkbox").prop("checked", false);
-    });
+    // alert('hello');
 
 
-    // alert("hello");
-
-
-
-    // jQuery.validator.addMethod("letters", function (value, element) {
-    //     return this.optional(element) || /[a-zA-Z ]/.test(value);
-    // }, "Please, enter letters only.");
-
-
-    // jQuery.validator.addMethod('letters', function (value, element) {
-    //     if (/^[a-zA-Z]+$/.test(value)) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     };
-    // });
-
-
-
-    $("#product_form").validate({
+    $(".product_form").validate({
 
         rules: {
             sku: {
@@ -67,7 +42,6 @@ $(document).ready(function () {
 
                 minlength: 3,
                 maxlenght: 20,
-                letters: true //why it doesn't work???
             },
             price: {
                 minlength: 3,
@@ -121,13 +95,4 @@ $(document).ready(function () {
 
 
 });
-
-
-
-
-
-
-
-
-
 

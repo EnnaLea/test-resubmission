@@ -1,29 +1,39 @@
 <?php
 
-
+// can become Trait
 class Display
 {
+    public $err;
+    public $nameErr;
 
-
-
-
-
-    public function showProduct()
+    public function setErrors($err, $nameErr)
     {
-        global $data;
-
-        $dvd = new Dvd;
-        $dvd->getValue();
-
-        $book = new Book;
-        $book->getValue();
-
-        $furniture = new Furniture;
-        $furniture->getValue();
+        $this->err = $err;
+        $this->nameErr = $nameErr;
     }
 
 
 
+    public function new()
+    {
+
+        $dvd = new Dvd;
+        $book = new Book;
+        $furniture = new Furniture;
+
+        $class = array($book, $dvd, $furniture);
+
+        return $class;
+    }
+
+    public function showProduct()
+    {
+        $pruduct_type = $this->new();
+
+        foreach ($pruduct_type as $product) {
+            $product->getValue();
+        }
+    }
 
 
     public function errors()
@@ -32,24 +42,36 @@ class Display
 
         $data = new Database;
 
-        $err = "Please, submit required data.";
+        $err = "Please, submit required data.  ";
 
         if (isset($_POST['save_product'])) {
 
             if (empty($_POST['sku'])) {
+                echo $nameErr = "SKU is required.  ";
             }
 
             if (empty($_POST['name'])) {
+                echo $nameErr = "Name is required.  ";
             }
 
             if (empty($_POST['price'])) {
+                echo $nameErr = "Price is required.  ";
             }
 
-            echo $err;
+
+
+            echo ($err);
         }
     }
 
+    public function cancelAdd()
+    {
+        if (isset($_POST['delete_product'])) {
 
+            header("Location: index.php");
+            exit();
+        }
+    }
 
     public function massDelete()
     {
@@ -63,7 +85,7 @@ class Display
 
                 foreach ($checkbox as $checkId) {
 
-                    $sql = "DELETE FROM product WHERE sku = $checkId  ";
+                    $sql = "DELETE FROM product WHERE id = $checkId  ";
 
                     $data->query($sql);
                 }
