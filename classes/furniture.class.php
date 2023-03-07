@@ -10,39 +10,36 @@ class Furniture extends Products implements Calling
 
         if (isset($_POST['save_product'])) {
 
-            if (isset($_POST['type-switcher'])) {
+            //     if (isset($_POST['type-switcher'])) {
 
 
-                if (empty($_POST['width'])) {
-                }
+            //         if (empty($_POST['width'])) {
+            //         }
 
-                if (empty($_POST['lenght'])) {
-                }
+            //         if (empty($_POST['lenght'])) {
+            //         }
 
-                if (empty($_POST['height'])) {
-                }
-                echo "";
-            }
+            //         if (empty($_POST['height'])) {
+            //         }
+            //         echo "Please, submit required data.";
+            //     }
 
-            $class = strtolower($_POST['type-switcher']);
 
-            if ($class == 'furniture') {
 
-                $sku = $this->clean($_POST['sku']);
-                $name = $this->clean($_POST['name']);
-                $price = $this->clean($_POST['price']);
-                $type = $_POST['type-switcher'];
-                $height = $this->clean($_POST['height']);
-                $width = $this->clean($_POST['width']);
-                $lenght = $this->clean($_POST['lenght']);
+            $sku = $this->clean($_POST['sku']);
+            $name = $this->clean($_POST['name']);
+            $price = $this->clean($_POST['price']);
+            $type = $this->clean($_POST['type-switcher']);
+            $height = $this->clean($_POST['height']);
+            $width = $this->clean($_POST['width']);
+            $lenght = $this->clean($_POST['lenght']);
 
-                $sql = "INSERT INTO product(sku, name , price, type, height, width, lenght) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$lenght')  ";
+            $sql = "INSERT INTO product(sku, name , price, type, height, width, lenght) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$lenght')  ";
 
-                $data->query($sql);
+            $data->query($sql);
 
-                header("Location: index.php");
-                exit();
-            }
+            header("Location: index.php");
+            exit();
         }
     }
 
@@ -96,6 +93,6 @@ class Furniture extends Products implements Calling
 
     public function call()
     {
-        return $this->getValue();
+        return $this->setValue();
     }
 }

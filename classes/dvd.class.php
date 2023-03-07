@@ -20,7 +20,7 @@ class Dvd extends Products implements Calling
             $sku = $this->clean($_POST['sku']);
             $name = $this->clean($_POST['name']);
             $price = $this->clean($_POST['price']);
-            $type = $_POST['type-switcher'];
+            $type = $this->clean($_POST['type-switcher']);
             $size = $this->clean($_POST['size']);
             $sql = "INSERT INTO product (sku, name , price, type, size) VALUES('$sku', '$name', '$price', '$type', '$size') ";
             $data->query($sql);

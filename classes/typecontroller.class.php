@@ -3,11 +3,6 @@
 
 class TypeController extends Display
 {
-
-
-
-
-
     public function set(Calling $productClass)
     {
         $product = $productClass->call();
@@ -17,21 +12,19 @@ class TypeController extends Display
     public function insert()
     {
 
-        //devo mantenere i campi salvati come fare?
-
         if (isset($_POST['save_product'])) {
 
-            $this->errors();
-
-            //controlla solo che type non sia vuoto
-            if (!empty($_POST['type-switcher']) && $_POST['type-switcher'] !== 'Type Switcher') {
-
+            if (
+                !empty($_POST['type-switcher']) && $_POST['type-switcher'] !== 'Type Switcher'
+                && !empty($_POST['sku']) && !empty($_POST['name']) && !empty($_POST['price'])
+            ) {
                 $product_name = $_POST['type-switcher'];
                 $product = new $product_name;
                 return $this->set($product);
             } else {
 
-                echo $nameErr = "Type is required.  ";
+                echo $err = "Please, submit required data.";
+                htmlspecialchars($_SERVER["PHP_SELF"]);
             }
         }
     }

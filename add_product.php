@@ -70,7 +70,7 @@ include_once("init.php");
         $data = new Database;
         $err = new Display;
         $class_call = new TypeController;
-        // $err->errors();
+        $err->cancelAdd();
         $class_call->insert();
 
 
