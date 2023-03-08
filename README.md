@@ -88,6 +88,7 @@ Requirement for ADD PRODUCT:
 - Implement input field value validation, invalid data must trigger notification “Please, provide the data of indicated type”
 <!-- data validation  see project php oop-->
 <!-- i can use jquery :https://www.geeksforgeeks.org/form-validation-using-jq -->
+<!-- fatto? -->
 
 
 - Notification messages should appear on the same page without reloading

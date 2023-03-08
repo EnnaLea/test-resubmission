@@ -16,14 +16,15 @@ abstract class Products extends Database
 
 
 
-    //save data
+    //to save data
     abstract function setValue();
 
 
-    //display data
+    //to display data
     abstract function getValue();
 
-    public function clean($data)
+    //input sanitization
+    protected function clean($data)
     {
         $data = trim($data);
         $data = stripslashes($data);

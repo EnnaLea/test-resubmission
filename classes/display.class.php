@@ -1,19 +1,11 @@
 <?php
 
-// can become Trait
+
 class Display
 {
-    // public $err;
-    // public $nameErr;
-
-    // public function setErrors($err, $nameErr)
-    // {
-    //     $this->err = $err;
-    //     $this->nameErr = $nameErr;
-    // }
 
 
-
+    // create array of classes
     public function new()
     {
 
@@ -26,6 +18,7 @@ class Display
         return $class;
     }
 
+    // using array of classes to display product info into
     public function showProduct()
     {
         $pruduct_type = $this->new();
@@ -75,6 +68,7 @@ class Display
         // }
     }
 
+    // to make cancel botton go to index.php
     public function cancelAdd()
     {
         if (isset($_POST['delete_product'])) {
@@ -84,6 +78,7 @@ class Display
         }
     }
 
+    // delete query for botton massdelete
     public function massDelete()
     {
 
