@@ -54,9 +54,9 @@ class Book extends Products implements Calling
             <div class='row' id='display'> 
                 <div class='col' id='info'> 
                     <div class='card' style = 'margin: 0; padding-top: 0.5rem; padding-bottom:0.5rem; dispaly: flex;'>
-                        <div class='card-body info' style= 'dispaly: flex; margin: 0; padding: 0;>
+                        <div class='card-body info' style= 'dispaly: flex; margin: 0; padding: 0;'>
                             <input id= 'chk_all' type='checkbox' class='delete-checkbox' name='delete-checkbox[]' value='$id'>
-                            <div class='items text-center style='justify-content:center; align-items: center; margin: 0; padding: 0;'>
+                            <div class='items text-center' style='justify-content:center; align-items: center; margin: 0; padding: 0;'>
                                 
                                 <table style='justify-content:center; align-items: center; margin: 0; padding: 0;'> 
                                     <tbody >

@@ -3,17 +3,6 @@
 
 abstract class Products extends Database
 {
-    // protected $sku;
-    // protected $name;
-    // protected $price;
-    // protected $type;
-    // protected $weight;
-    // protected $lenght;
-    // protected $size;
-    // protected $width;
-    // protected $height;
-
-
 
 
     //to save data

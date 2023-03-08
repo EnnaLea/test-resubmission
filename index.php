@@ -20,7 +20,7 @@ include_once("init.php");
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
 </head>
 
@@ -28,7 +28,7 @@ include_once("init.php");
 <body>
 
   <header>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar navbar-dark  shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
           <strong>Your@Shop</strong>
@@ -46,10 +46,10 @@ include_once("init.php");
           <div class="row ">
             <div class="header col-lg">
               <span class="product col">
-                <h1 class=" fw-light">Product List</h1>
+                <h1 class=" ">Product List</h1>
               </span>
-              <span class="product-buttons col"><a href="add_product.php" class=" btn btn-primary my-2">ADD</a>
-                <button id="delete-product-btn" type="submit" name="mass_delete" class="btn btn-secondary my-2" value="mass_delete">MASS DELETE</button>
+              <span class="product-buttons col"><a href="add_product.php" class=" btn button-first  my-2">ADD</a>
+                <button id="delete-product-btn" type="submit" name="mass_delete" class="btn button-second my-2" value="mass_delete">MASS DELETE</button>
               </span>
             </div>
 
@@ -60,7 +60,7 @@ include_once("init.php");
       <div class="main album py-5 bg-light">
         <div class="container-fluid">
 
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 d-flex">
+          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3  d-flex">
             <?php
             $data = new Database;
             $product = new Display();
