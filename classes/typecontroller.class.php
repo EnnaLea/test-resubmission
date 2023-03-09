@@ -4,8 +4,6 @@
 class TypeController extends Display
 {
 
-    public $err;
-
     // function to save product based on type
     public function set(Calling $productClass)
     {

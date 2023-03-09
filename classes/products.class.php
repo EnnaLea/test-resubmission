@@ -4,7 +4,6 @@
 abstract class Products extends Database
 {
 
-
     //to save data
     abstract function setValue();
 
