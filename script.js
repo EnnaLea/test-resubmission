@@ -96,34 +96,32 @@ $(document).ready(function () {
 
     // input field validation
     $('#no-refresh-form').click(function (e) {
-        e.preventDefault();
+
 
         var sku = $("#sku").val();
         if (sku == '') {
-            $('#message_error').html('<p>Please, submit required SKU.</p>');
+            $('#message_error_sku').html('<p>Please, submit required data.</p>');
             $('#sku').focus();
             return false;
         }
         var name = $("#name").val();
         if (name == '') {
-            $('#message_error').html('<p>Please, submit required Name.</p>');
+            $('#message_error_name').html('<p>Please, submit required data.</p>');
             $('#name').focus();
             return false;
         }
         var price = $("#price").val();
         if (price == '') {
-            $('#message_error').html('<p>Please, submit required Price.</p>');
+            $('#message_error_price').html('<p>Please, submit required data.</p>');
             $('#price').focus();
             return false;
         }
 
         var type = $("#productType").val();
         if (type == 'Type Switcher') {
-            $('#message_error').html('<p>Please, submit required Type.</p>');
-            return false;
-        }
-
-        $(".productType").on('click', function () {
+            $('#message_error_type').html('<p>Please, submit required data.</p>');
+            return false
+        } else {
             $(this).find("option:selected").each(function () {
                 var optionValue = $(this).attr("value");
 
@@ -131,28 +129,28 @@ $(document).ready(function () {
                     case "DVD":
                         var size = $("#size").val();
                         if (size == '') {
-                            $('#message_error').html('<p>Please, submit required Size.</p>');
+                            $('#message_error_size').html('<p>Please, submit required data.</p>');
                             $('#size').focus();
                             return false;
                         }
-
                         break;
+
                     case "Furniture":
                         var height = $("#height").val();
                         if (height == '') {
-                            $('#message_error').html('<p>Please, submit required Height.</p>');
+                            $('#message_error_height').html('<p>Please, submit required data.</p>');
                             $('#height').focus();
                             return false;
                         }
                         var width = $("#width").val();
                         if (width == '') {
-                            $('#message_error').html('<p>Please, submit required Width.p>');
+                            $('#message_error_width').html('<p>Please, submit required data.p>');
                             $('#width').focus();
                             return false;
                         }
                         var lenght = $("#lenght").val();
                         if (lenght == '') {
-                            $('#message_error').html('<p>Please, submit required Lenght.</p>');
+                            $('#message_error_lenght').html('<p>Please, submit required data.</p>');
                             $('#lenght').focus();
                             return false;
                         }
@@ -161,7 +159,7 @@ $(document).ready(function () {
                     case "Book":
                         var weight = $("#weight").val();
                         if (weight == '') {
-                            $('#message_error').html('<p>Please, submit required Weight.</p>');
+                            $('#message_error_weight').html('<p>Please, submit required data.</p>');
                             $('#weight').focus();
                             return false;
                         }
@@ -171,26 +169,31 @@ $(document).ready(function () {
                         break;
                 }
             });
+            e.preventDefault();
+        }
 
-        });
+        // $("#productType").on('click', function () {
+
+
+        // });
 
         // $('#message_error').html('<p>Please, submit required Type.</p>');
 
 
-        $.ajax({
-            // type: 'POST',
-            // url: 'classes/typecontroller.class.php',
-            // data: dataString,
-            // beforeSend: function () {
-            //     $('#message_error').html()
-            // },
-            success: function (data) {
-                setTimeout(function () {
-                    $('#message_error').html(data);
-                });
-            }
+        // $.ajax({
+        // type: 'POST',
+        // url: 'classes/typecontroller.class.php',
+        // data: dataString,
+        // beforeSend: function () {
+        //     $('#message_error').html()
+        // },
+        // success: function (data) {
+        //     setTimeout(function () {
+        //         $('#message_error').html(data);
+        //     });
+        // }
 
-        });
+        // });
     })
 
 
