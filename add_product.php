@@ -87,27 +87,27 @@ include_once("init.php");
 
 
           <div class="form-group mb-3" style="width: 30rem;">
-
-            <label for="sku">SKU</label>
             <span id="message_error_sku">
               <!-- error will display here  -->
             </span>
+            <label for="sku">SKU</label>
+
             <input class="form-control" type="text" name="sku" id="sku" placeholder="">
           </div>
 
           <div class="form-group mb-3" style="width: 30rem;">
-            <label for="name">Name</label>
             <span id="message_error_name">
               <!-- error will display here  -->
             </span>
+            <label for="name">Name</label>
             <input class="form-control" type="text" name="name" id="name" placeholder="">
           </div>
 
           <div class="form-group mb-3" style="width: 30rem;">
-            <label for="price">Price($)</label>
             <span id="message_error_price">
               <!-- error will display here  -->
             </span>
+            <label for="price">Price($)</label>
             <input class="form-control" type="text" name="price" id="price" placeholder="">
             <label id="price-error" class="error" for="price"></label>
           </div>
@@ -115,10 +115,10 @@ include_once("init.php");
           <!-- SELECT OPTION  FORM-->
 
           <div class="form-group mb-3" style="width: 15rem;">
-            <label class="control-label" for="type-switcher">Type Switcher</label>
             <span id="message_error_type">
               <!-- error will display here  -->
             </span>
+            <label class="control-label" for="type-switcher">Type Switcher</label>
             <select name="type-switcher" id="productType" class="productType">
               <option value="Type Switcher">---Select type---</option>
 
@@ -138,10 +138,10 @@ include_once("init.php");
 
             <div class=" container select-option-dvd" id="dvd-form ">
               <div class="form-group mb-3 DVD" style="width: 30rem;">
-                <label for="size" class="control-label">Size MB</label>
                 <span id="message_error_size">
                   <!-- error will display here  -->
                 </span>
+                <label for="size" class="control-label">Size MB</label>
                 <input name="size" class="form-control" type="text" id="size" placeholder="">
                 <div id="passwordHelpBlock" class="form-text">
                   “Please, provide size in MB.”
@@ -154,26 +154,26 @@ include_once("init.php");
 
             <div class=" container furniture-form select-option-furniture">
               <div class=" mb-3" style="width: 30rem;">
+
                 <label for="height" class="control-label">Height (CM)</label>
+                <input class="form-control" name="height" type="text" id="height" placeholder="">
                 <span id="message_error_height">
                   <!-- error will display here  -->
                 </span>
-                <input class="form-control" name="height" type="text" id="height" placeholder="">
 
 
                 <label for="width" class="control-label">Width (CM)</label>
+                <input class="form-control" name="width" type="text" id="width" placeholder="">
                 <span id="message_error_width">
                   <!-- error will display here  -->
                 </span>
-                <input class="form-control" name="width" type="text" id="width" placeholder="">
 
 
                 <label for="length" class="control-label">Length (CM)</label>
-                <span id="message_error_lenght">
+                <input class="form-control" name="length" type="text" id="length" placeholder="">
+                <span id="message_error_length">
                   <!-- error will display here  -->
                 </span>
-                <input class="form-control" name="lenght" type="text" id="length" placeholder="">
-
               </div>
 
               <div id="passwordHelpBlock" class="form-text form-group">
@@ -185,10 +185,10 @@ include_once("init.php");
 
             <div class="form-group container book-form select-option-book">
               <div class="form-group mb-3" style="width: 30rem;">
-                <label for="weight" class="control-label">Weight (KG)</label>
                 <span id="message_error_weight">
                   <!-- error will display here  -->
                 </span>
+                <label for="weight" class="control-label">Weight (KG)</label>
                 <input class="form-control" name="weight" type="text" id="weight" placeholder="">
                 <div id="passwordHelpBlock" class="form-text">
                   “Please, provide weight in KG.”

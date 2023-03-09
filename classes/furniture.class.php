@@ -16,9 +16,9 @@ class Furniture extends Products implements Calling
             $type = $this->clean($_POST['type-switcher']);
             $height = $this->clean($_POST['height']);
             $width = $this->clean($_POST['width']);
-            $lenght = $this->clean($_POST['lenght']);
+            $length = $this->clean($_POST['length']);
 
-            $sql = "INSERT INTO product(sku, name , price, type, height, width, lenght) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$lenght')  ";
+            $sql = "INSERT INTO product(sku, name , price, type, height, width, length) VALUES('$sku', '$name', '$price', '$type', '$height', '$width', '$length')  ";
 
             $data->query($sql);
 
@@ -32,7 +32,7 @@ class Furniture extends Products implements Calling
     {
         global $data;
 
-        $query = "SELECT id, sku, name, price, height, width, lenght FROM product WHERE type = 'furniture' ";
+        $query = "SELECT id, sku, name, price, height, width, length FROM product WHERE type = 'furniture' ";
 
         $result = $data->query($query);
 
@@ -43,7 +43,7 @@ class Furniture extends Products implements Calling
             $sku = $row['sku'];
             $name = $row['name'];
             $price = $row['price'];
-            $lenght = $row['lenght'];
+            $length = $row['length'];
             $width = $row['width'];
             $height = $row['height'];
 
@@ -63,7 +63,7 @@ class Furniture extends Products implements Calling
                                                     <td> " . $sku . "</td>
                                                     <td> " . $name . "</td>
                                                     <td>" . $price . "$" . "</td>
-                                                    <td>" . "Dimension: " . $height . "x" . $width . "x" . $lenght . "</td>
+                                                    <td>" . "Dimension: " . $height . "x" . $width . "x" . $length . "</td>
                                                 </tr>
                                             </tbody>
                                         </table>

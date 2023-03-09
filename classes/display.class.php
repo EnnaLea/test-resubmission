@@ -29,45 +29,6 @@ class Display
     }
 
 
-    public function errors()
-    {
-        // global $data;
-
-        // $data = new Database;
-
-        // if (
-        //     !empty($_POST['type-switcher']) && $_POST['type-switcher'] !== 'Type Switcher'
-        //     && !empty($_POST['sku']) && !empty($_POST['name']) && !empty($_POST['price']) ||
-        //     !empty($_POST['size'] || !empty($_POST['weight']) && !empty($_POST['width']))
-        //     || !empty($_POST['lenght']  || !empty($_POST['height']))
-
-
-        // ) {
-        // echo $err = "Please, submit required data.";
-        // htmlspecialchars($_SERVER["PHP_SELF"]);
-        // }
-
-
-
-        // if (isset($_POST['save_product'])) {
-
-        //     if (empty($_POST['sku'])) {
-
-        //     }
-
-
-        //     if (empty($_POST['name'])) {
-
-        //     }
-
-        //     if (empty($_POST['price'])) {
-
-        //     }
-
-
-        // }
-    }
-
     // to make cancel botton go to index.php
     public function cancelAdd()
     {
