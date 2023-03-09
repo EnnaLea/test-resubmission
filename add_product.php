@@ -41,6 +41,9 @@ include_once("init.php");
 
   <main>
 
+
+
+
     <form action="" class="product_form" method="post" id="product_form">
 
       <section class="py-5 text-center container ">
@@ -55,7 +58,7 @@ include_once("init.php");
 
                 <button id="Save" type="submit" name="save_product" class="btn button-first my-2 save" value="save_product">Save</button>
 
-                <button id="Cancel" type="submit" name="delete_product" class="btn button-second my-2" value="delete_product">Cancel</button>
+                <button id="Cancel" type="submit" name="delete_product" class="btn button-second my-2 cancel" value="delete_product">Cancel</button>
                 </a>
               </span>
 
@@ -64,7 +67,11 @@ include_once("init.php");
         </div>
       </section>
 
-      <div class="main album py-5 bg-light">
+      <div class="main album py-5 bg-light" id="no-refresh-form">
+
+        <div id="message_error">
+          <!-- All error will display here  -->
+        </div>
 
         <div class="container-fluid">
 
@@ -174,6 +181,8 @@ include_once("init.php");
       </div>
 
     </form>
+
+
 
   </main>
 

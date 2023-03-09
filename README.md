@@ -81,18 +81,12 @@ Requirement for ADD PRODUCT:
 - Special attributes should have a description, related to their type, e.g.: “Please, provide dimensions” / “Please, provide weight” / “Please, provide size” when related product type is selected
 <!-- fatto -->
 
+
 - All fields are mandatory for submission, missing values should trigger notification “Please, submit required data”
-<!-- implement with js or html? -->
-<!-- fatto! -->
-
 - Implement input field value validation, invalid data must trigger notification “Please, provide the data of indicated type”
-<!-- data validation  see project php oop-->
-<!-- i can use jquery :https://www.geeksforgeeks.org/form-validation-using-jq -->
-<!-- fatto? -->
-
-
 - Notification messages should appear on the same page without reloading
-<!-- fatto? -->
+<!-- non va bene! la pagina refresha. provare con jquery ajax -->
+<!-- fatto! -->
 
 - The page must have a “Save” button to save the product. Once saved, return to the “Product List” page with the new product added.
 <!-- save into the database then go on product list and show the addiction -->
