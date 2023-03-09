@@ -41,9 +41,6 @@ include_once("init.php");
 
   <main>
 
-
-
-
     <form action="" class="product_form" method="post" id="product_form">
 
       <section class="py-5 text-center container ">
@@ -69,13 +66,7 @@ include_once("init.php");
 
       <div class="main album py-5 bg-light" id="no-refresh-form">
 
-
-
         <div class="container-fluid">
-
-          <div id="message_error">
-            <!-- All error will display here  -->
-          </div>
 
           <?php
           $data = new Database;
@@ -84,7 +75,6 @@ include_once("init.php");
           $err->cancelAdd();
           $class_call->insert();
           ?>
-
 
           <div class="form-group mb-3" style="width: 30rem;">
             <span id="message_error_sku">
@@ -113,7 +103,6 @@ include_once("init.php");
           </div>
 
           <!-- SELECT OPTION  FORM-->
-
           <div class="form-group mb-3" style="width: 15rem;">
             <span id="message_error_type">
               <!-- error will display here  -->
@@ -135,7 +124,6 @@ include_once("init.php");
           <div class=" form-group formContainer">
 
             <!-- for dvd -->
-
             <div class=" container select-option-dvd" id="dvd-form ">
               <div class="form-group mb-3 DVD" style="width: 30rem;">
                 <span id="message_error_size">
@@ -151,7 +139,6 @@ include_once("init.php");
 
 
             <!-- for furniture -->
-
             <div class=" container furniture-form select-option-furniture">
               <div class=" mb-3" style="width: 30rem;">
 
@@ -182,7 +169,6 @@ include_once("init.php");
             </div>
 
             <!-- for book -->
-
             <div class="form-group container book-form select-option-book">
               <div class="form-group mb-3" style="width: 30rem;">
                 <span id="message_error_weight">
@@ -195,16 +181,10 @@ include_once("init.php");
                 </div>
               </div>
             </div>
+
           </div>
 
-
-
         </div>
-
-
-
-
-      </div>
 
       </div>
 
@@ -233,8 +213,7 @@ include_once("init.php");
 
 
   <script src="javascript/script.js"></script>
-  <script src="script.js"></script>
-
+  <!-- <script src="script.js"></script> -->
 
 </body>
 

@@ -24,7 +24,6 @@ include_once("init.php");
 
 </head>
 
-
 <body>
 
   <header>
@@ -52,7 +51,6 @@ include_once("init.php");
                 <button id="delete-product-btn" type="submit" name="mass_delete" class="btn button-second my-2" value="mass_delete">MASS DELETE</button>
               </span>
             </div>
-
           </div>
         </div>
       </section>
@@ -60,7 +58,7 @@ include_once("init.php");
       <div class="main album py-5 bg-light">
         <div class="container-fluid">
 
-          <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3  d-flex">
+          <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3  d-flex">
             <?php
             $data = new Database;
             $product = new Display();
@@ -69,11 +67,7 @@ include_once("init.php");
             ?>
 
           </div>
-
         </div>
-
-      </div>
-
       </div>
 
     </form>
@@ -97,11 +91,8 @@ include_once("init.php");
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-
   <script src="javascript/script.js"></script>
   <script src="script.js"></script>
-
-
 
 </body>
 

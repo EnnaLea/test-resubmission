@@ -34,7 +34,5 @@ class TypeController extends Display
                 htmlspecialchars($_SERVER["PHP_SELF"]);
             }
         }
-
-        // && 'Type Switcher' == $type
     }
 }
