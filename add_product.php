@@ -69,8 +69,8 @@ include_once("init.php");
         <div class="container-fluid">
 
           <?php
-          $data = new Database;
-          $err = new Display;
+          $data = new Database();
+          $err = new Display();
           $class_call = new TypeController;
           $err->cancelAdd();
           $class_call->insert();

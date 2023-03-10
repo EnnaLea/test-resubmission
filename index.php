@@ -60,7 +60,7 @@ include_once("init.php");
 
           <div class="row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3  d-flex">
             <?php
-            $data = new Database;
+            $data = new Database();
             $product = new Display();
             $product->showProduct();
             $product->massDelete();
