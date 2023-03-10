@@ -27,7 +27,6 @@ $(document).ready(function () {
         });
     }).change();
 
-    // alert('hello');
 
     // input field implementation
     $("#product_form").validate({
@@ -181,118 +180,6 @@ $(document).ready(function () {
 
         location.reload(true);
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // $(function () {
-    //     function sendData($form) {
-    //         let dataString = $form.serialize();
-
-    //         return $ajax({
-    //             type: $form.attr('method'),
-    //             url: $form.attr('action'),
-    //             data:
-    //                 dataString,
-
-    //         })
-
-    //     }
-
-
-    // function SubmitFormData() {
-    //     var sku = $("#sku").val();
-    //     var name = $("#name").val();
-    //     var price = $("#price").val();
-    //     var size = $("#size").val();
-    //     var weight = $("#weight").val();
-    //     var width = $("#width").val();
-    //     var lenght = $("#lenght").val();
-    //     var height = $("#height").val();
-    //     var type = $("input[type=select]:selected").val();
-    //     $.post("bin/process.php", { sku: sku, name: name, price: price, size: size, weight: weight, width: width, lenght: lenght, height: height, type: type },
-    //         function (data) {
-    //             $('#results').html(data);
-    //             $('#product_form')[0].reset();
-    //         });
-    // }
-
-
-
-    // $('form').validate();
-
-    // $('form').on('submit', function (e) {
-
-    //     e.preventDefault();
-
-    //     let dataString = $(this).serialize();
-
-    //     sendData($(this)).done(function () {
-
-    // error: function() {
-    //     $('#no-refresh-form').html('<div id="message"></div>')
-
-
-    // }
-
-    //     $('#message')
-    //         .html('<p>Please Submit Required Data.</p>')
-    //         .hide()
-    //         .fadeIn(1500);
-
-    // });
-
-    // $.ajax({
-    //     type: 'POST',
-    //     url: 'bin/process.php',
-    //     data: dataString,
-    //     success: function () {
-    //         $('#no-refresh-form').html('<div id="message"></div>')
-
-    //         $('#message')
-    //             .html('<p>>Contact Form Submtted!</p>')
-    //             .append('<p></p>')
-    //             .hide()
-    //             .fadeIn(1500);
-
-    // }
-    // });
-
-    // });
 
 
 })
