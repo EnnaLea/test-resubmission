@@ -1,7 +1,8 @@
 <?php
 
 
-class Book extends Products implements Calling
+class Book extends Products implements
+    Calling
 {
 
     // query to save value from the form
