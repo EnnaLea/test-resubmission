@@ -17,9 +17,16 @@ include_once("init.php");
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="//code.jquery.com/jquery.min.js"></script>
+
+
 
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
 </head>
 
@@ -50,7 +57,7 @@ include_once("init.php");
                 <h1 class="">Product Add</h1>
               </span>
 
-              <span class="product-buttons col form-group">
+              <span id="span" class="product-buttons col form-group">
 
                 <button id="Save" type="submit" name="save_product" class="btn button-first my-2 save" value="save_product">Save</button>
 
@@ -67,6 +74,13 @@ include_once("init.php");
 
         <div class="container-fluid">
 
+          <div>
+            <span id="sku-duplicate">
+              <!-- error will display here  -->
+            </span>
+          </div>
+
+
           <?php
           $data = new Database();
           $err = new Display();
@@ -75,7 +89,7 @@ include_once("init.php");
           $class_call->insert();
           ?>
 
-          <div class="form-group mb-3" style="width: 30rem;">
+          <div id="sku-id" class="form-group mb-3" style="width: 30rem;">
             <span id="message_error_sku">
               <!-- error will display here  -->
             </span>
@@ -210,7 +224,9 @@ include_once("init.php");
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
-  <script src="javascript/script.js"></script>
+
+  <script src="script.js"></script>
+  <!-- <script src="javascript/script.js"></script> -->
 
 </body>
 

@@ -18,14 +18,19 @@ class Display
         return $class;
     }
 
-    // using array of classes to display product info into
+    // using array of classes to display product info 
     public function showProduct()
     {
+
+
         $pruduct_type = $this->new();
 
         foreach ($pruduct_type as $product) {
-            $product->getValue();
+            $value = $product;
+            $value->getValue();
         }
+
+        return $value;
     }
 
 

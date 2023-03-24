@@ -18,8 +18,8 @@ class TypeController extends Display
             $type = $_POST['type-switcher'];
 
             if (
-                !empty($_POST['type-switcher']) &&
-                $_POST['type-switcher'] !== 'Type Switcher' &&
+                !empty($type) &&
+                $type !== 'Type Switcher' &&
                 !empty($_POST['sku']) &&
                 !empty($_POST['name']) && !empty($_POST['price'])
             ) {
