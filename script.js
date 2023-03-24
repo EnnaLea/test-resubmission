@@ -192,28 +192,28 @@ $(document).ready(function () {
 
 
     // duplicate sku error messages
-    $('#sku').click(function (e) {
+    // $('#sku').click(function (e) {
 
-        // let skuId = $(this).attr("value");
-        var sku = $("#sku").val();
-        let skuId = $("#sku-value").val();
-        if (sku == skuId) {
-            $('#sku-duplicate').html('<p>This SKU already exist. Click  HERE  to change</p>');
-            return false;
-        }
-        console.log(skuId);
-        console.log(sku);
+    //     let skuId = $(this).attr("value");
+    //     var sku = $("#sku").val();
+    //     // let skuId = $("#sku-value").val();
+    //     if (sku == skuId) {
+    //         $('#sku-duplicate').html('<p>This SKU already exist. Click  HERE  to change</p>');
+    //         return false;
+    //     }
+    //     console.log(skuId);
+    //     console.log(sku);
 
 
-        e.preventDefault();
-    })
+    //     e.preventDefault();
+    // })
 
-    $("#sku-duplicate").click(function () {
+    // $("#sku-duplicate").click(function () {
 
-        location.reload(true);
+    //     location.reload(true);
 
-        e.preventDefault();
-    })
+    //     e.preventDefault();
+    // })
 
 
     // fetch dvd
@@ -273,7 +273,6 @@ $(document).ready(function () {
             return response.json();
         })
         .then(function (products) {
-            // let placeholder = $("#cards");
             let outFurniture = "";
             for (let product of products) {
                 outFurniture += `
@@ -358,7 +357,7 @@ $(document).ready(function () {
         })
 
 
-})//fine document ready
+})//end
 
 
 
