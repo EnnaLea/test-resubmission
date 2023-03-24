@@ -114,16 +114,6 @@ $product->massDelete();
 
                         <?php
                         $product->showProduct();
-                        // $product->clearCards();
-                        // $dvd = new Dvd();
-                        // $dvd->deleteJson();
-                        // $dvd->getValue();
-                        // $furniture = new Furniture();
-                        // $furniture->deleteJson();
-                        // $book = new Book();
-                        // $book->deleteJson();
-                        // $fetch = new Fetch();
-                        // $fetch->deleteJson();
                         ?>
 
                     </div>
