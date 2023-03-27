@@ -225,8 +225,8 @@ include_once("init.php");
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 
 
-  <script src="script.js"></script>
-  <!-- <script src="javascript/script.js"></script> -->
+
+  <script src="javascript/script.js"></script>
 
 </body>
 
