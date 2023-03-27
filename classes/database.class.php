@@ -37,12 +37,11 @@ class Database
     public function confirm_query($result)
     {
         if (!$result) {
-            // die();
-            die("Query failed!" . $this->connection->error);
-        }
 
-        // header("Location: add_product.php");
-        // exit();
+            // die("Query failed!" . $this->connection->error);
+            header("Location: add_product.php");
+            exit();
+        }
     }
 }
 

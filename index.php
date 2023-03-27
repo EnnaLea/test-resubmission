@@ -4,12 +4,6 @@ ob_start();
 
 include_once("init.php");
 
-$data = new Database();
-
-$product = new Display();
-
-$product->massDelete();
-
 ?>
 
 
@@ -113,6 +107,9 @@ $product->massDelete();
                     <div id="product-card" class="product-card row row-cols-1 row-cols-xs-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3  d-flex">
 
                         <?php
+                        $data = new Database();
+                        $product = new Display();
+                        $product->massDelete();
                         $product->showProduct();
                         ?>
 
