@@ -28,9 +28,7 @@ class Display
         foreach ($pruduct_type as $product) {
             $value = $product;
             $value->getValue();
-            // htmlspecialchars($_SERVER["PHP_SELF"]);
         }
-        return $value;
     }
 
 

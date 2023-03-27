@@ -49,9 +49,11 @@ class Book extends Products implements Calling
         if (!empty($products)) {
             $encoded_data = json_encode($products, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             file_put_contents('book.json', $encoded_data);
+            htmlspecialchars($_SERVER["PHP_SELF"]);
         } else {
             if (file_exists("book.json")) {
                 unlink("book.json");
+                htmlspecialchars($_SERVER["PHP_SELF"]);
             }
         }
     }
