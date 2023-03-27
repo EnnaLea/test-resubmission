@@ -1,0 +1,29 @@
+[
+    {
+        "id": "30",
+        "sku": "00000",
+        "name": "test000",
+        "price": "40.00",
+        "height": "190",
+        "width": "80",
+        "length": "40"
+    },
+    {
+        "id": "31",
+        "sku": "00001",
+        "name": "test001",
+        "price": "40.00",
+        "height": "160",
+        "width": "40",
+        "length": "140"
+    },
+    {
+        "id": "32",
+        "sku": "00002",
+        "name": "test002",
+        "price": "40.00",
+        "height": "167",
+        "width": "90",
+        "length": "40"
+    }
+]

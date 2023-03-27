@@ -38,11 +38,11 @@ class Database
     {
         if (!$result) {
             // die();
-            // die("Query failed!" . $this->connection->error);
+            die("Query failed!" . $this->connection->error);
         }
 
-        header("Location: add_product.php");
-        exit();
+        // header("Location: add_product.php");
+        // exit();
     }
 }
 

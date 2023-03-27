@@ -192,28 +192,69 @@ $(document).ready(function () {
 
 
     // duplicate sku error messages
-    // $('#sku').click(function (e) {
+    $("#no-refresh-form").click(function () {
 
-    //     let skuId = $(this).attr("value");
-    //     var sku = $("#sku").val();
-    //     // let skuId = $("#sku-value").val();
-    //     if (sku == skuId) {
-    //         $('#sku-duplicate').html('<p>This SKU already exist. Click  HERE  to change</p>');
-    //         return false;
-    //     }
-    //     console.log(skuId);
-    //     console.log(sku);
+        $.ajax("dvd.json").done(function (response) {
+
+            for (var i = 0; i <= response.length; i++) {
+
+                var inputString = $("#sku").val();
+                let skuId = response[i].sku;
+                if (skuId == inputString) {
+
+                    $('#sku-duplicate').html('<p>This SKU already exist. Click  <strong>HERE</strong>  to change</p>');
+                    console.log("This SKU already exist.");
+                    $("#sku").focus();
+
+                }
+
+            }
+
+        });
+
+        $.ajax("book.json").done(function (response) {
+
+            for (var i = 0; i <= response.length; i++) {
+
+                var inputString = $("#sku").val();
+                let skuId = response[i].sku;
+                if (skuId == inputString) {
+
+                    $('#sku-duplicate').html('<p>This SKU already exist. Click  HERE  to change</p>');
+                    console.log("This SKU already exist.");
+                    $("#sku").focus();
+
+                }
+
+            }
+
+        });
+
+        $.ajax("furniture.json").done(function (response) {
+
+            for (var i = 0; i <= response.length; i++) {
+
+                var inputString = $("#sku").val();
+                let skuId = response[i].sku;
+                if (skuId == inputString) {
+
+                    $('#sku-duplicate').html('<p>This SKU already exist. Click  <bold>HERE</bold>  to change</p>');
+                    console.log("This SKU already exist.");
+                    $("#sku").focus();
+
+                }
+
+            }
+
+        });
+    });
+
+    $("#sku-duplicate").click(function (e) {
+        location.reload(true);
+        e.preventDefault();
+    });
 
 
-    //     e.preventDefault();
-    // })
-
-    // $("#sku-duplicate").click(function () {
-
-    //     location.reload(true);
-
-    //     e.preventDefault();
-    // })
 
 
     // fetch dvd
@@ -223,9 +264,6 @@ $(document).ready(function () {
         })
         .then(function (products) {
             let outDvd = "";
-
-            // let skuIdDvd = array();
-
             for (let product of products) {
                 outDvd += `
 
@@ -262,7 +300,6 @@ $(document).ready(function () {
                 return outDvd;
 
             });
-
         })
 
 
@@ -308,7 +345,6 @@ $(document).ready(function () {
             $("#product-card").append(function () {
                 return outFurniture;
             });
-
         })
 
 

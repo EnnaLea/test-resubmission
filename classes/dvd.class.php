@@ -47,10 +47,12 @@ class Dvd extends Products implements Calling
         if (!empty($products)) {
             $encoded_data = json_encode($products, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             file_put_contents('dvd.json', $encoded_data);
+            htmlspecialchars($_SERVER["PHP_SELF"]);
         } else {
 
             if (file_exists("dvd.json")) {
                 unlink("dvd.json");
+                htmlspecialchars($_SERVER["PHP_SELF"]);
             }
         }
     }

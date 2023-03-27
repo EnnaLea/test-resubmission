@@ -1,9 +1,23 @@
 [
     {
-        "id": "17",
+        "id": "20",
         "sku": "000",
-        "name": "dopo email",
+        "name": "test0",
         "price": "4.99",
         "size": "800"
+    },
+    {
+        "id": "21",
+        "sku": "001",
+        "name": "test1",
+        "price": "4.99",
+        "size": "600"
+    },
+    {
+        "id": "24",
+        "sku": "002",
+        "name": "test2",
+        "price": "4.99",
+        "size": "700"
     }
 ]
